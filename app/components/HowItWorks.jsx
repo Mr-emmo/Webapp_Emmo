@@ -2,19 +2,19 @@ import SectionTitle from "./SectionTitle";
 
 const steps = [
   {
-    number: "01",
-    title: "Voice Interaction",
-    body: "Travellers talk naturally to EMMO using their preferred language. Wake‑word and touch options are supported."
+    number: "1",
+    title: "Voice Activation",
+    body: "Simply speak to EMMO in your preferred language to start the conversation."
   },
   {
-    number: "02",
-    title: "AI Reasoning",
-    body: "Speech is transcribed, translated if needed and processed by AI models that understand intent and venue context."
+    number: "2",
+    title: "AI Processing",
+    body: "Advanced AI understands your query and retrieves real-time information."
   },
   {
-    number: "03",
+    number: "3",
     title: "Instant Assistance",
-    body: "EMMO responds with voice, on‑screen cards or navigation instructions, and can escalate to human staff when required."
+    body: "Get immediate answers with visual and voice guidance to your destination."
   }
 ];
 
@@ -22,22 +22,24 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-14 lg:py-20 bg-gradient-to-b from-emerald-50/50 to-slate-50"
+      className="py-14 lg:py-20 bg-primary/5"
     >
       <div className="section space-y-10">
         <SectionTitle
           eyebrow="How EMMO Works"
-          title="From question to action in three simple steps."
-          subtitle="A tightly integrated pipeline from microphones and sensors to AI services and venue systems."
+          title="Simple interaction for instant assistance."
+          subtitle="From voice input to real-time answers, EMMO keeps every step clear and intuitive."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
           {steps.map((step) => (
             <div key={step.number} className="card flex flex-col gap-4">
-              <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-xs font-semibold text-white">
-                {step.number}
+              <div className="mx-auto flex flex-col items-center justify-center gap-3">
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">
+                  {step.number}
+                </div>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 text-center">
                 <h3 className="text-sm font-semibold text-slate-900">
                   {step.title}
                 </h3>
