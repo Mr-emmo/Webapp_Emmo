@@ -2,16 +2,16 @@ import SectionTitle from "./SectionTitle";
 
 const scenarios = [
   {
-    title: "Railway & Metro Stations",
-    body: "Guide passengers to platforms, washrooms and ticket counters while answering FAQs about schedules and delays."
+    title: "Railway Stations",
+    body: "Platform information, train schedules, ticket booking assistance, and station navigation."
   },
   {
-    title: "Malls & Smart Venues",
-    body: "Boost footfall to stores, manage visitor flow during events and provide hands‑free indoor navigation."
+    title: "Bus Stands",
+    body: "Route information, departure times, fare details, and local transport guidance."
   },
   {
     title: "Airports",
-    body: "Assist with wayfinding from check‑in to boarding gates, highlight duty‑free offers and support irregular operations."
+    body: "Flight information, terminal navigation, baggage claim, and tourist information."
   }
 ];
 
@@ -21,16 +21,13 @@ export default function Deployment() {
       <div className="section space-y-10">
         <SectionTitle
           eyebrow="Deployment Scenarios"
-          title="Designed for busy, high‑footfall environments."
-          subtitle="Start with a single pilot robot and scale to a fleet connected to your operations dashboard."
+          title="EMMO enhances traveler experience across multiple transport hubs."
+          subtitle="Deploy the same AI assistant across different nodes in your transport network for a unified experience."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
           {scenarios.map((item) => (
             <div key={item.title} className="card flex flex-col gap-3">
-              <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 text-sm font-semibold">
-                {item.title[0]}
-              </div>
               <h3 className="text-sm font-semibold text-slate-900">
                 {item.title}
               </h3>
