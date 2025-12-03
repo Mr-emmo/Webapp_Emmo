@@ -75,7 +75,7 @@ export default function Specs() {
               {/* Updated IMAGE section */}
               <div className="relative w-48 h-64 sm:w-56 sm:h-72 overflow-hidden rounded-[2rem] shadow-xl">
                 <Image
-                  src="/images/robot-platform.png"
+                  src="/images/Screenshot_20250928-174233.Photos.png"
                   alt="Robot Platform"
                   fill
                   className="object-cover rounded-[2rem]"
