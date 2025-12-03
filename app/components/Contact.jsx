@@ -15,7 +15,6 @@ export default function Contact() {
     const form = e.currentTarget;
     const data = {
       name: form.name.value,
-      company: form.company.value,
       email: form.email.value,
       message: form.message.value
     };
@@ -45,50 +44,34 @@ export default function Contact() {
       <div className="section grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-10 items-start">
         <div className="space-y-5">
           <SectionTitle
-            eyebrow="Get in Touch"
-            title="Schedule a demo or talk to our team."
-            subtitle="Share a few details about your venue and we&apos;ll follow up with deployment options, pricing and a pilot plan."
+            eyebrow="Get In Touch"
+            title="Interested in deploying EMMO at your transport hub?"
+            subtitle="We’d love to discuss how our AI assistant can enhance your travelers’ experience."
             align="left"
           />
           <ul className="space-y-2 text-sm text-slate-600">
-            <li>• Customizable flows for railway, metro, malls and airports.</li>
-            <li>• On‑site or remote PoC deployments in under 6 weeks.</li>
-            <li>• Enterprise‑grade security with data residency options.</li>
+            <li>• Expert Consultation</li>
+            <li>• Quick Response Time</li>
+            <li>• Live Demo Available</li>
           </ul>
         </div>
 
         <div className="card">
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="name"
-                  className="text-xs font-medium text-slate-700"
-                >
-                  Your Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                  placeholder="Arun Kumar"
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="company"
-                  className="text-xs font-medium text-slate-700"
-                >
-                  Organisation / Venue
-                </label>
-                <input
-                  id="company"
-                  name="company"
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                  placeholder="Example Metro Corp"
-                />
-              </div>
+            <div className="space-y-1.5">
+              <label
+                htmlFor="name"
+                className="text-xs font-medium text-slate-700"
+              >
+                Your Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                required
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                placeholder="Your Name"
+              />
             </div>
 
             <div className="space-y-1.5">
@@ -96,15 +79,15 @@ export default function Contact() {
                 htmlFor="email"
                 className="text-xs font-medium text-slate-700"
               >
-                Work Email
+                Your Email
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                placeholder="you@company.com"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                placeholder="you@example.com"
               />
             </div>
 
@@ -113,14 +96,14 @@ export default function Contact() {
                 htmlFor="message"
                 className="text-xs font-medium text-slate-700"
               >
-                How can we help?
+                Your Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 resize-none"
-                placeholder="Share a bit about your use case, expected footfall and timelines."
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary resize-none"
+                placeholder="Share a bit about your transport hub and timelines."
               />
             </div>
 
@@ -128,12 +111,12 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-2 text-sm font-medium text-white shadow-soft hover:bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2 text-sm font-medium text-white shadow-md hover:bg-teal-600 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
               >
-                {status === "loading" ? "Sending..." : "Submit Enquiry"}
+                {status === "loading" ? "Sending..." : "Send Message"}
               </button>
               {status === "success" && (
-                <p className="text-xs text-emerald-600">
+                <p className="text-xs text-primary">
                   Thank you! We&apos;ll be in touch shortly.
                 </p>
               )}
@@ -143,11 +126,6 @@ export default function Contact() {
                 </p>
               )}
             </div>
-
-            <p className="text-[11px] text-slate-500">
-              By submitting this form you agree that we may contact you about
-              EMMO deployments, pricing and product updates.
-            </p>
           </form>
         </div>
       </div>
