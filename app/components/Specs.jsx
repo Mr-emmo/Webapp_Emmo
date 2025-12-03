@@ -73,17 +73,16 @@ export default function Specs() {
           <div className="relative">
             <div className="absolute -inset-10 rounded-[2.5rem] bg-gradient-to-b from-emerald-100/70 via-white to-sky-50 blur-2xl" />
             <div className="relative card rounded-[2.4rem] px-10 py-12 flex flex-col items-center gap-8">
-              <div className="rounded-[2rem] bg-slate-900 w-40 h-52 sm:w-48 sm:h-64 flex items-center justify-center overflow-hidden">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-18 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
-                    <span className="w-10 h-6 rounded-xl border border-slate-500 bg-slate-900 flex items-center justify-center">
-                      <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.7)]" />
-                    </span>
-                  </div>
-                  <div className="w-16 h-16 rounded-[1.8rem] bg-slate-800 border border-slate-700" />
-                  <div className="w-24 h-4 rounded-full bg-slate-800 border border-slate-700" />
-                </div>
-              </div>
+              <div className="relative w-48 h-64 sm:w-56 sm:h-72 overflow-hidden rounded-[2rem] shadow-xl">
+  <Image
+    src="/images/robot-platform.png"
+    alt="Robot Platform"
+    fill
+    className="object-cover rounded-[2rem]"
+    priority
+  />
+</div>
+
               <div className="text-center space-y-1">
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-500">
                   Robot Platform
