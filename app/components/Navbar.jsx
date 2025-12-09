@@ -37,7 +37,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-white shadow-md hover:bg-teal-600 transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-teal-600 px-4 py-1.5 text-xs font-medium text-white shadow-md hover:bg-teal-300 transition-colors"
           >
             Request Demo
           </a>
